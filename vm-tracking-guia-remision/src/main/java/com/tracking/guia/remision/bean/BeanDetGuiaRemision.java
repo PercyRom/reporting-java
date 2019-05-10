@@ -8,15 +8,6 @@ public class BeanDetGuiaRemision {
 	private String cantidad;
 	private String descripcion;
 
-	public BeanDetGuiaRemision(String item, String codigo, String uniMedida, String cantidad, String descripcion) {
-		super();
-		this.item = item;
-		this.codigo = codigo;
-		this.uniMedida = uniMedida;
-		this.cantidad = cantidad;
-		this.descripcion = descripcion;
-	}
-
 	public String getItem() {
 		return item;
 	}

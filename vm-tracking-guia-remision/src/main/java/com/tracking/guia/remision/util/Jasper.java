@@ -57,9 +57,13 @@ public class Jasper {
 
 			message = new BeanMessage();
 			jasperReport = (JasperReport) JRLoader.loadObject(inputStream);
+			
+			int fill = lsBean.size();
+			for (int i = fill; i <= 8; i++) {
+				lsBean.add(new BeanDetGuiaRemision());
+			}
 
 			dataSource = new JRBeanCollectionDataSource(lsBean);
-
 			parameters = new HashMap<String, Object>();
 
 			parameters.put("RAZON_SOCIAL", cabGuiaRemision.getRazonSocial());
