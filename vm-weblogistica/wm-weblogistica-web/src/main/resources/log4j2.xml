@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Properties>
+        <Property name="basePath">C:\\tracking</Property>
+    </Properties>
+    <Appenders>
+        <!-- File Appender -->
+        <File name="Archivo" fileName="${basePath}/vm-weblogistica-web.log" append="true">
+            <PatternLayout pattern="%d{dd-MMM-yyyy - HH:mm:ss,SSS} %5p (%F:%L) - %m%n" />
+        </File>
+        <!-- Console Appender -->
+        <Console name="Consola" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd-MMM-yyyy - HH:mm:ss,SSS} %5p (%F:%L) - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.tracking" level="debug" />
+        <Root level="info">
+            <AppenderRef ref="Archivo" />
+            <AppenderRef ref="Consola" />
+        </Root>
+    </Loggers>
+</Configuration>

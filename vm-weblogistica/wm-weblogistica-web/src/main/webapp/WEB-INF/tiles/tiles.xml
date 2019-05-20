@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="layoutMain" template="/WEB-INF/jsp/layout/layoutMain.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layout/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp" />
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="login" template="/WEB-INF/jsp/views/login.jsp">
+	</definition>
+	
+	<definition name="dashboard" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/dashboard.jsp" />
+	</definition>
+	
+	<definition name="usuarios" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/usuarios.jsp" />
+	</definition>
+	
+	<definition name="roles" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/roles.jsp" />
+	</definition>
+	
+	<definition name="entidad" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/entidad.jsp" />
+	</definition>
+	
+	<definition name="mntoEntidad" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/mntoEntidad.jsp" />
+	</definition>
+	
+	<definition name="compra-registro" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/compra-registro.jsp" />
+	</definition>
+	<definition name="compras" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/jsp/views/compras.jsp" />
+	</definition>
+
+</tiles-definitions>
